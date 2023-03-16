@@ -168,6 +168,7 @@ Partial Class frmConverter
         Me.Controls.Add(Me.lblConverter)
         Me.Controls.Add(Me.picBuilding)
         Me.Name = "frmConverter"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Building Plans Conversion"
         CType(Me.picBuilding, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grpConversionType.ResumeLayout(False)
