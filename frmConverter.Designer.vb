@@ -22,6 +22,7 @@ Partial Class frmConverter
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmConverter))
         Me.picBuilding = New System.Windows.Forms.PictureBox()
         Me.lblConverter = New System.Windows.Forms.Label()
         Me.lblMeasureIndicator = New System.Windows.Forms.Label()
@@ -39,44 +40,52 @@ Partial Class frmConverter
         '
         'picBuilding
         '
-        Me.picBuilding.Location = New System.Drawing.Point(44, 24)
+        Me.picBuilding.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.picBuilding.Image = CType(resources.GetObject("picBuilding.Image"), System.Drawing.Image)
+        Me.picBuilding.Location = New System.Drawing.Point(11, 12)
         Me.picBuilding.Name = "picBuilding"
-        Me.picBuilding.Size = New System.Drawing.Size(100, 50)
+        Me.picBuilding.Size = New System.Drawing.Size(259, 213)
+        Me.picBuilding.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.picBuilding.TabIndex = 0
         Me.picBuilding.TabStop = False
         '
         'lblConverter
         '
         Me.lblConverter.AutoSize = True
-        Me.lblConverter.Location = New System.Drawing.Point(327, 35)
+        Me.lblConverter.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblConverter.Location = New System.Drawing.Point(334, 42)
         Me.lblConverter.Name = "lblConverter"
-        Me.lblConverter.Size = New System.Drawing.Size(111, 20)
+        Me.lblConverter.Size = New System.Drawing.Size(236, 37)
         Me.lblConverter.TabIndex = 1
         Me.lblConverter.Text = "Converter App"
         '
         'lblMeasureIndicator
         '
         Me.lblMeasureIndicator.AutoSize = True
-        Me.lblMeasureIndicator.Location = New System.Drawing.Point(291, 101)
+        Me.lblMeasureIndicator.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMeasureIndicator.Location = New System.Drawing.Point(291, 104)
         Me.lblMeasureIndicator.Name = "lblMeasureIndicator"
-        Me.lblMeasureIndicator.Size = New System.Drawing.Size(277, 20)
+        Me.lblMeasureIndicator.Size = New System.Drawing.Size(314, 20)
         Me.lblMeasureIndicator.TabIndex = 2
         Me.lblMeasureIndicator.Text = "Enter a value and choose conversion: "
         '
         'txtMeasure
         '
-        Me.txtMeasure.Location = New System.Drawing.Point(616, 101)
+        Me.txtMeasure.BackColor = System.Drawing.SystemColors.Info
+        Me.txtMeasure.Location = New System.Drawing.Point(632, 101)
         Me.txtMeasure.Name = "txtMeasure"
         Me.txtMeasure.Size = New System.Drawing.Size(100, 26)
         Me.txtMeasure.TabIndex = 3
         '
         'grpConversionType
         '
+        Me.grpConversionType.BackColor = System.Drawing.SystemColors.Info
         Me.grpConversionType.Controls.Add(Me.radMToIn)
         Me.grpConversionType.Controls.Add(Me.radInToM)
-        Me.grpConversionType.Location = New System.Drawing.Point(359, 177)
+        Me.grpConversionType.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.grpConversionType.Location = New System.Drawing.Point(359, 174)
         Me.grpConversionType.Name = "grpConversionType"
-        Me.grpConversionType.Size = New System.Drawing.Size(200, 100)
+        Me.grpConversionType.Size = New System.Drawing.Size(259, 100)
         Me.grpConversionType.TabIndex = 4
         Me.grpConversionType.TabStop = False
         Me.grpConversionType.Text = "Convert Measurement"
@@ -86,7 +95,7 @@ Partial Class frmConverter
         Me.radInToM.AutoSize = True
         Me.radInToM.Location = New System.Drawing.Point(7, 26)
         Me.radInToM.Name = "radInToM"
-        Me.radInToM.Size = New System.Drawing.Size(153, 24)
+        Me.radInToM.Size = New System.Drawing.Size(169, 24)
         Me.radInToM.TabIndex = 0
         Me.radInToM.TabStop = True
         Me.radInToM.Text = "Inches to Meters"
@@ -95,9 +104,9 @@ Partial Class frmConverter
         'radMToIn
         '
         Me.radMToIn.AutoSize = True
-        Me.radMToIn.Location = New System.Drawing.Point(7, 57)
+        Me.radMToIn.Location = New System.Drawing.Point(7, 56)
         Me.radMToIn.Name = "radMToIn"
-        Me.radMToIn.Size = New System.Drawing.Size(153, 24)
+        Me.radMToIn.Size = New System.Drawing.Size(169, 24)
         Me.radMToIn.TabIndex = 1
         Me.radMToIn.TabStop = True
         Me.radMToIn.Text = "Meters to Inches"
@@ -105,6 +114,7 @@ Partial Class frmConverter
         '
         'btnConvert
         '
+        Me.btnConvert.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnConvert.Location = New System.Drawing.Point(70, 357)
         Me.btnConvert.Name = "btnConvert"
         Me.btnConvert.Size = New System.Drawing.Size(200, 50)
@@ -114,6 +124,7 @@ Partial Class frmConverter
         '
         'btnClear
         '
+        Me.btnClear.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnClear.Location = New System.Drawing.Point(295, 357)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(200, 50)
@@ -123,6 +134,7 @@ Partial Class frmConverter
         '
         'btnExit
         '
+        Me.btnExit.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnExit.Location = New System.Drawing.Point(516, 357)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(200, 50)
@@ -133,9 +145,10 @@ Partial Class frmConverter
         'lblResult
         '
         Me.lblResult.AutoSize = True
-        Me.lblResult.Location = New System.Drawing.Point(355, 297)
+        Me.lblResult.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblResult.Location = New System.Drawing.Point(366, 297)
         Me.lblResult.Name = "lblResult"
-        Me.lblResult.Size = New System.Drawing.Size(91, 20)
+        Me.lblResult.Size = New System.Drawing.Size(102, 20)
         Me.lblResult.TabIndex = 8
         Me.lblResult.Text = "placeholder"
         '
@@ -143,6 +156,7 @@ Partial Class frmConverter
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.DarkKhaki
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.lblResult)
         Me.Controls.Add(Me.btnExit)
